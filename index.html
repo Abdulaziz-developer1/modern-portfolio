@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            text-align: center;
+            background: #f0f0f5;
+            color: #333;
+            font-size: 1.5rem;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            padding: 0.1rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        section {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            gap: 10px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.5rem;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background: #4b6cb7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #182848;
+        }
+        footer {
+            background: #182848;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to My Digital Space</h2>
+        <p>I craft innovative web experiences with clean design and solid code.</p>
+        <button><a href="https://github.com/SHIALIK">Explore My Work</a></button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a front-end developer passionate about creating dynamic, user-friendly designs for websites.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p>HTML, CSS, Office apps, UI/UX Design</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/xanqprwj" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025© My Portfolio | Created with passion</p>
+    </footer>
+</body>
+</html>
