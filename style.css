@@ -1,4 +1,18 @@
 /* General Styles */
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color: #fff;
+}
+
+html{
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -10,21 +24,21 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    background: linear-gradient(90deg, #182848, #182848);
     color: white;
-    padding: 0.3rem 1rem;
     position: fixed;
+    padding: 10px 0;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-around;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
-nav{
-    display: flex;
-    align-items: center;
+.logo img {
+    height: 50px;
 }
 
 nav ul {
@@ -33,7 +47,6 @@ nav ul {
     justify-content: center;
     gap: 20px;
     padding: 0;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -49,9 +62,42 @@ nav a:hover {
     color: #ffcc00;
 }
 
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+@media (max-width: 700px) {
+    .menu-button {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #182848;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0 30px 0;
+        gap: 15px;
+    }
+    nav ul.show {
+        display: flex;
+    }
+}
+
 /* Sections */
 section {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,13 +105,14 @@ section {
     width: 100%;
     padding: 20px;
     background: white;
-    font-size: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
 }
 
-section:nth-child(1){
-    margin-top: 200px;
+p{
+    width: 85%;
 }
 
 /* Form */
@@ -75,6 +122,9 @@ form {
     align-items: center;
     width: 50%;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form input, form textarea {
@@ -101,44 +151,106 @@ button:hover {
 }
 
 /* Footer */
-footer {
+footer{
     background: #182848;
-    color: white;
-    padding: 1rem;
-    text-align: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.flexbox{
+    display: flex;
+    width: 95%;
+    padding: 10px 0 30px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flexbox ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* margin-left: 45px; */
+    font-size: 20px;
+    max-width: 200px;
+}
+
+.flexbox ul li:nth-child(1){
+    margin-top: 0px;
+}
+
+#blog{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 20px;
+}
+
+#blog h2{
+    margin-top: 40px;
+}
+
+#blog a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+}
+
+#blog a i{
+    font-size: 2em;
+}
+
+hr{
+    width: 90%;
+}
+
+.footer_p {
+    text-align: center;
+    width: 80%;
 }
 
 /* Responsive Design */
+@media (max-width:1000px) {
+    .flexbox{
+        width: 90%;
+        display: flex;
+        gap: 30px;
+        justify-content: space-evenly;
+    }
+}
 @media (max-width: 768px) {
     body {
         font-size: 1.2rem;
     }
     header{
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 35px;
-    }    
-    nav{
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
     nav ul {
         flex-wrap: wrap;
         align-items: center;
         gap: 10px;
-        max-width: 50%;
-        justify-content: center;
     }
     form {
-        width: 80%;
+        width: 70%;
     }
     form input, form textarea {
         font-size: 1.2rem;
-        padding: 15px;
+        padding: 15px 10px;
     }
     button {
         font-size: 1.2rem;
         padding: 10px 20px;
+    }
+}
+
+@media (max-width:550px) {
+    footer{
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+        padding: 5%;
     }
 }

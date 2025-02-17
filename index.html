@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://media.istockphoto.com/id/1135090585/vector/letter-p-logo-icon-design.jpg?s=612x612&w=0&k=20&c=lzfzb__61ufKGy-mvrHDriaazQW9iMGj5HK52PQTH9Y=">
-    <script defer src="script.js"></script>
-</head>
+    <link rel="icon" href="https://files.oaiusercontent.com/file-DBKJZYU5xmPBh84Btj15fq?se=2025-02-17T14%3A33%3A43Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dbd196fa1-9ad2-4156-be76-40b7c0705edf.webp&sig=ZFyZL9BHiVrnvDqKm2faNLOEJ1DrX3z8kfF0SE5a76w%3D">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Welcome</h1>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
         <nav>
-            <ul>
+            <ul id="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -33,7 +31,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a full-stack developer passionate about creating dynamic, user-friendly websites.</p>
+        <p class="p">I'm a full-stack developer passionate about creating dynamic, user-friendly websites.</p>
     </section>
     
     <section id="skills">
@@ -43,7 +41,7 @@
     
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="send-email.php" method="POST">
+        <form action="https://formspree.io/f/xanqprwj" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -52,7 +50,46 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 My Portfolio | Designed with passion</p>
+        <div class="flexbox">
+            <ul>
+                <h2>Home</h2>
+                <li><a href="#home">Home</a></li>
+            </ul>
+            <ul>
+                <h2>About me</h2>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <ul>
+                <h2>Contact</h2>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div id="blog">
+                <h2>Blog</h2>
+                <a href="https://t.me/tabdulazizt">
+                    <i class='bx bxl-telegram'></i>
+                    <p>Telegram</p>
+                </a>
+                <a href="https://www.instagram.com/t__abdulaz1z/">
+                    <i class='bx bxl-instagram'></i>
+                    <p>Instagram</p>
+                </a>
+                <a href="https://github.com/SHIALIK">
+                    <i class='bx bxl-github'></i>
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <p class="footer_p">&copy; 2025 My Portfolio | Designed with passion</p>
     </footer>
+
+    <script>
+        // menu btn
+        function toggleMenu() {
+            document.getElementById("nav-list").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
